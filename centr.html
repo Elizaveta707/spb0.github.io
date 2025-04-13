@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путеводитель по Санкт-Петербургу - Архитектура</title>
+    <link rel="stylesheet" href="css2.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="logo">
+            <h1>Путеводитель по Санкт-Петербургу</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="spb.html">Главная</a></li>
+                <li><a href="parks.html">Парки и сады</a></li>
+                <li><a href="arhit.html">Архитектура</a></li>
+                <li><a href="art.html">Арт-объекты</a></li>
+                <li><a href="priroda.html">Природа</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- маршрут по центру-->
+    <section class="parks">
+        <h2>Центр Санкт-Петербурга</h2>
+	<p>Нельзя однозначно назвать самый популярный маршрут по центру Санкт-Петербурга, но вот один из вариантов</p>
+
+               
+<br>
+<br>
+
+
+        <!-- Первый парк -->
+        <div class="park">
+<br>
+<br>
+ <title>Центрирование текста</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Маршрут по центру</h1>
+<br>
+<p class="text-with-indent">
+   Один из востребованных маршрутов проходит по Большой и Малой Неве с выходом в Финский залив, к «Лахта-центру», вдоль Смольной набережной, по Обводному и Грибоедовскому каналам, по Мойке и Фонтанке, а затем возвращает в исходную точку. По пути можно увидеть Зимний дворец и ограду Летнего сада, Стрелку Васильевского острова и стены Петропавловской крепости, крейсер «Аврора», Медного всадника и Смольный собор, Исаакиевский собор и Храм Спаса на Крови, Адмиралтейство и Строгановский дворец, Казанский собор и Марсово поле, Аничков дворец и другие места.
+</p>
+</div>   
+<br>
+<br>
+        </div>
+<style>
+        .slider-container {
+            width: 600px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .slider {
+            display: flex;
+            width: 100%; /* Важно, чтобы слайдер занимал всю ширину контейнера */
+            height: 100%;
+            transition: transform 0.5s ease-in-out; /* Плавная анимация */
+        }
+
+        .slide {
+            width: 600px;
+            height: 400px;
+            flex-shrink: 0; /* Запрещаем слайдам сжиматься */
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Заполняем контейнер, обрезая изображение при необходимости */
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="https://sk-moskvich.ru/attaches/files/c5bf2488593e44393eb7dc305911c1ef.jpg"></div" alt="Изображение 1"></div>
+            <div class="slide"><img src="https://i.pinimg.com/736x/70/0a/37/700a37ef49a6c3a900946d2dc7d206af.jpg" alt="Изображение 2"></div>
+            <div class="slide"><img src="https://static.78.ru/images/uploads/1715592084461.jpg?width=1600" alt="Изображение 3"></div>
+	    <div class="slide"><img src="https://ucare.timepad.ru/8bb75e2d-416e-4167-ac66-b3fbd4f2e460/-/preview/" alt="Изображение 3"></div>
+	    <div class="slide"><img src="https://new-world-rpg.ru/wp-content/uploads/1/2/7/127f316139f4871b2286092aeed3b181.jpeg" alt="Изображение 3"></div>
+	    <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Spb_06-2012_Nevsky_various_04.jpg/1200px-Spb_06-2012_Nevsky_various_04.jpg" alt="Изображение 3"></div>
+
+        </div>
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+    </div>
+
+    <script>
+        // 1. Получаем доступ к элементам DOM
+        const sliderContainer = document.querySelector('.slider-container');
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        // 2. Определяем текущий индекс слайда
+        let slideIndex = 0;
+
+        // 3. Функция для перемещения слайдера
+        function moveSlide(direction) {
+            // Обновляем индекс слайда
+            slideIndex += direction;
+
+            // Проверяем границы (если дошли до конца или начала)
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1; // Переходим к последнему слайду
+            } else if (slideIndex >= slides.length) {
+                slideIndex = 0; // Переходим к первому слайду
+            }
+
+            // Вычисляем смещение для transform
+            const slideWidth = slides[0].offsetWidth; // Ширина одного слайда
+            const translateX = -slideIndex * slideWidth; // Смещение
+
+            // Применяем transform для перемещения слайдера
+            slider.style.transform = `translateX(${translateX}px)`;
+        }
+
+        // 4. Добавляем обработчики событий для кнопок
+        // (В данном коде обработчики уже назначены в HTML: onclick="moveSlide(-1)" и onclick="moveSlide(1)")
+        // Это можно сделать и через JavaScript, если убрать onclick из HTML:
+        // prevButton.addEventListener('click', () => moveSlide(-1));
+        // nextButton.addEventListener('click', () => moveSlide(1));
+
+
+        // 5. Инициализация (если нужно, например, показать первый слайд)
+        moveSlide(0); // Показываем первый слайд при загрузке страницы (не обязательно)
+
+    </script>
+
+    </section>
+<br>
+
+   </body>
+</html>

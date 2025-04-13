@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путеводитель по Санкт-Петербургу</title>
+    <link rel="stylesheet" href="ddff.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Путеводитель по Санкт-Петербургу</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="parks.html">Парки и сады</a></li>
+                <li><a href="arhit.html">Архитектура</a></li>
+                <li><a href="art.html">Арт-объекты</a></li>
+                <li><a href="priroda.html">Природа</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+<div class="slider">
+<title>Текст поверх изображения на всю страницу</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;           /* Занимает всю ширину */
+            height: 100%;          /* Занимает всю высоту */
+            overflow: hidden;      /* Скрываем все, что выходит за пределы контейнера */
+        }
+
+        .image-container img {
+            width: 100%;          /* Занимает всю ширину контейнера */
+            height: 100%;         /* Занимает всю высоту контейнера */
+            object-fit: cover;    /* Важно: Масштабирует изображение, чтобы оно заполнило контейнер */
+            /* object-fit: contain;  // Альтернатива:  Показывает изображение целиком */
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);  /* Центрируем текст */
+            color: white;
+            font-size: 60px;  /* Регулируй размер текста */
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.2); /* Полупрозрачный фон (опционально) */
+            padding: 20px;  /* Отступы вокруг текста */
+            width: 90%; /* Задаем ширину блока с текстом */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="https://anpash.ru/wp-content/uploads/2023/04/p24172.jpg" height="495">
+        <div class="text-overlay">
+            Узнай новое о культурной столице России
+        </div>
+    </div>
+	
+    </section>
+
+    <section class="destinations">
+         <section class="destinations">
+        <h2>Популярные маршруты</h2>
+        <div class="destination">
+            <img src="https://sokroma.ru/upload/resize_cache/webp/images/ploshchad-zimnego-dvorca.webp" width="85" height="60">" alt="Центр города">
+ 	<nav>
+            <ul>
+                <li><a href="centr.html"><h3>Центр города</h3></a></li>     
+            </ul>
+        </nav>
+            <p>Дворцы, соборы, Невский проспект..</p>
+        </div>
+        <div class="destination">
+            <img src="https://excurspb.ru/upload/img-cache/main/ff460d649289c7e1b6d5b27b498b2d33/07d97a32.jpg" width="85" height="60">" alt="Реки и каналы">
+	nav>
+            <ul>
+                <li><a href="reki.html"><h3>Реки и каналы</h3></a></li>     
+            </ul>
+        </nav>
+            <p>Прогулка на катере по рекам и каналам.</p>
+        </div>
+    </section>
+
+</body>
+</html>

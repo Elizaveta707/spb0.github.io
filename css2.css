@@ -1,0 +1,203 @@
+/* Сброс базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f1e1; /* Бежевый фон */
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* Обёртка */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #003366; /* Темно-синий фон */
+    padding: 20px;
+    color: #f4f1e1; /* Бежевый текст */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 28px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #f4f1e1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Основной контент */
+main {
+    background-color: #f4f1e1;
+    padding: 40px;
+    border-left: 20px solid #003366;
+    border-right: 20px solid #003366;
+}
+
+/* Оглавление и темы */
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: flex-start;
+}
+
+/* Оглавление слева */
+.sidebar {
+    width: 25%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    color: #003366;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #003366;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    color: #ffcc99;
+}
+
+/* Темы справа */
+.content {
+    width: 70%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовки для тем */
+section h2 {
+    color: #003366;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Карточки, например, парки */
+.park {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 6px solid #c9b18c;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.park img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.park h3 {
+    color: #003366;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.park p {
+    color: #444;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: #f4f1e1;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Футер */
+footer {
+    background-color: #003366;
+    color: #f4f1e1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* Адаптивность под телефоны */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+
+    .park h3 {
+        font-size: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
